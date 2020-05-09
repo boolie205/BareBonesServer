@@ -1,12 +1,6 @@
 #include <iostream>
 #include <ws2tcpip.h>
-/*
-things to google after this:
 
-what is a pragma comment
-look into ws2lib
-Why shouldn't "using namespace std" like this normally?
-*/
 #pragma comment (lib, "ws2_32.lib") 
 using namespace std;
 
@@ -87,6 +81,7 @@ void main()
 			break;
 		}
 
+		cout << string(buf, 0, bytesReceived) << endl;
 		//echo message back to client
 		send(clientSocket, buf, bytesReceived + 1, 0);
 
