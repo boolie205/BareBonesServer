@@ -62,7 +62,7 @@ void main()
 	//Close listening socket
 	closesocket(listening);
 	//While loop : accept and echo message back to client
-	char buf[4096]; // really I should set this dynamically and read until there are no bytes but one step at a time god damn this is my 2nd c++ program will you lay off? 4k is more than enough relax.
+	char buf[4096]; // really I should set this dynamically and read until there are no bytes
 
 	while (true)
 	{
